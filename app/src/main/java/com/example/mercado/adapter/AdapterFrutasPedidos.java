@@ -68,10 +68,12 @@ public class AdapterFrutasPedidos extends RecyclerView.Adapter<AdapterFrutasPedi
 
     @Override
     public void onClick(View v) {
-
+        if(listener != null){
+            listener.onClick(v);
+        }
     }
 
-    public void setOnClickListener(View.OnClickListener onClickListener) {
+    public void setOnClickListener(View.OnClickListener listener) {
         this.listener = listener;
     }
 
